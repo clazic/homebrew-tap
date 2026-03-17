@@ -5,21 +5,21 @@
 class Kwcli < Formula
   desc "Command-line tool for Korean stock market data and trading."
   homepage "https://github.com/clazic/kwcli"
-  version "0.1.2-test"
+  version "0.2.0-test"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/clazic/kwcli/releases/download/v0.1.2-test/kwcli_Darwin_x86_64.tar.gz"
-      sha256 "c99a5d09787ab7a4e2854ed58d2d7059d71cebcbf4dae88839a30d92af8f833f"
+      url "https://github.com/clazic/kwcli/releases/download/v0.2.0-test/kwcli_Darwin_x86_64.tar.gz"
+      sha256 "9bfb563e59cd03bf2a5bee27ea8a3da1bdbbd3c528c486bc07ccf8ea74d7f868"
 
       define_method(:install) do
         bin.install "kwcli"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/clazic/kwcli/releases/download/v0.1.2-test/kwcli_Darwin_arm64.tar.gz"
-      sha256 "1e64f7455050b90c25436191d46d257a608f437889032f3bc828cbfcd6e3d516"
+      url "https://github.com/clazic/kwcli/releases/download/v0.2.0-test/kwcli_Darwin_arm64.tar.gz"
+      sha256 "dff10bd07d1d09ff8e2cf38cd21a4306ebb6b9c7a5cd3186357a48f9147ccf64"
 
       define_method(:install) do
         bin.install "kwcli"
@@ -29,15 +29,15 @@ class Kwcli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/clazic/kwcli/releases/download/v0.1.2-test/kwcli_Linux_x86_64.tar.gz"
-      sha256 "ff3a851dc3a40c33cbcb053da9174c1ad5aa570a4633995f391917ba9212b58b"
+      url "https://github.com/clazic/kwcli/releases/download/v0.2.0-test/kwcli_Linux_x86_64.tar.gz"
+      sha256 "89e3eb13f0fc5ee63812ef435c98bbc8cea4eafdcf3bc42cae62bbe7f93f8760"
       define_method(:install) do
         bin.install "kwcli"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/clazic/kwcli/releases/download/v0.1.2-test/kwcli_Linux_arm64.tar.gz"
-      sha256 "4f4aba3095a10fb67c02b4a9022292387589b69e0c76813bc99d20266da6ecb0"
+      url "https://github.com/clazic/kwcli/releases/download/v0.2.0-test/kwcli_Linux_arm64.tar.gz"
+      sha256 "bef1611edb8f8181089daa82a65d667117d62b425bae122819e3d4adeecf9509"
       define_method(:install) do
         bin.install "kwcli"
       end
