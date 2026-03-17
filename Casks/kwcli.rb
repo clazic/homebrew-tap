@@ -3,7 +3,7 @@ cask "kwcli" do
   name "kwcli"
   desc "Command-line tool for Korean stock market data and trading."
   homepage "https://github.com/clazic/kwcli"
-  version "0.2.2-test"
+  version "0.3.3-test"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "kwcli" do
   on_macos do
     on_intel do
       url "https://github.com/clazic/kwcli/releases/download/v#{version}/kwcli_Darwin_x86_64.tar.gz"
-      sha256 "50a1fa33ab3bfb6fe21fde7d1daf190c582a0c593d97b836b3d5e039bc92e308"
+      sha256 "2779383dae3c6663f87f996b4b2501d556bbee8eed5059c0cf1832cc61cadd12"
     end
     on_arm do
       url "https://github.com/clazic/kwcli/releases/download/v#{version}/kwcli_Darwin_arm64.tar.gz"
-      sha256 "569b421e715158ff1c20f033088672719f845aeed986e371ad16643ae56c2b2f"
+      sha256 "6dfe315eed28ee9ef2b4d957291910c0504c3ebb578dbc9f4c65cb376decbbed"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/clazic/kwcli/releases/download/v#{version}/kwcli_Linux_x86_64.tar.gz"
-      sha256 "7c86257f2a6e5d05378e8f72afc603df068ccbd7a041361b481ef03102959c0e"
+      sha256 "b2edd3704abf49da8438e2c27573fc955e14e2445f021394e9878cf35df745eb"
     end
     on_arm do
       url "https://github.com/clazic/kwcli/releases/download/v#{version}/kwcli_Linux_arm64.tar.gz"
-      sha256 "89a4bac06da7fca7543f5decc50217ff830504847b7ebd27a5d8adb678760a7d"
+      sha256 "0527a70326ad9597747dadf6aa30b2936ced3d01f765becf992b092c06d21b18"
     end
   end
 
