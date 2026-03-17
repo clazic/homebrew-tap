@@ -5,20 +5,20 @@
 class Kwcli < Formula
   desc "Command-line tool for Korean stock market data and trading."
   homepage "https://github.com/clazic/kwcli"
-  version "1.0.2"
+  version "1.0.3"
 
   on_macos do
     on_intel do
-      url "https://github.com/clazic/kwcli/releases/download/v1.0.2/kwcli_Darwin_x86_64.tar.gz"
-      sha256 "e4711122a805118b4dc5b1e7eccee8022ea02fb939cc53c26b16833c349a7156"
+      url "https://github.com/clazic/kwcli/releases/download/v1.0.3/kwcli_Darwin_x86_64.tar.gz"
+      sha256 "52fba009790c2247c3a7a5a1cc330ef774e832f92ad2f129bf6ea1148344c9c0"
 
       def install
         bin.install "kwcli"
       end
     end
     on_arm do
-      url "https://github.com/clazic/kwcli/releases/download/v1.0.2/kwcli_Darwin_arm64.tar.gz"
-      sha256 "9fb7f49be8e165250a87cade442bf496459a5084fc4d2fc9dd4fb12cd13ed380"
+      url "https://github.com/clazic/kwcli/releases/download/v1.0.3/kwcli_Darwin_arm64.tar.gz"
+      sha256 "6e50e59c143e1deb4d2a50bd9e0ad821e6ce2d9982ba7a539b57c9e5627587af"
 
       def install
         bin.install "kwcli"
@@ -29,8 +29,8 @@ class Kwcli < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/clazic/kwcli/releases/download/v1.0.2/kwcli_Linux_x86_64.tar.gz"
-        sha256 "99e809ca3e8cdbf8d8955ea9c3e98dc0fba96d8b298fcf76cfb5e65ba85da006"
+        url "https://github.com/clazic/kwcli/releases/download/v1.0.3/kwcli_Linux_x86_64.tar.gz"
+        sha256 "41eb48702c6f858161a90b482a8281f4a37f9f2657185e2aef944e4e807f337d"
 
         def install
           bin.install "kwcli"
@@ -39,8 +39,8 @@ class Kwcli < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/clazic/kwcli/releases/download/v1.0.2/kwcli_Linux_arm64.tar.gz"
-        sha256 "6d300f54af1a3b4609c2b893ecc5fe19fbea86d16ac5d7f25c1b1d45d07691c9"
+        url "https://github.com/clazic/kwcli/releases/download/v1.0.3/kwcli_Linux_arm64.tar.gz"
+        sha256 "3d7b2a572ce8ceaa21188679b4bfdfaa7d65cbde7d1adb5c1a9db728eda85597"
 
         def install
           bin.install "kwcli"
