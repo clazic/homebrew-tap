@@ -5,20 +5,21 @@
 class Kwcli < Formula
   desc "Command-line tool for Korean stock market data and trading."
   homepage "https://github.com/clazic/kwcli"
-  version "1.0.3"
+  version "0.1.0-test"
+  license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/clazic/kwcli/releases/download/v1.0.3/kwcli_Darwin_x86_64.tar.gz"
-      sha256 "52fba009790c2247c3a7a5a1cc330ef774e832f92ad2f129bf6ea1148344c9c0"
+      url "https://github.com/clazic/kwcli/releases/download/v0.1.0-test/kwcli_Darwin_x86_64.tar.gz"
+      sha256 "5fcc93057e814998c42235fc5e9a70f026f71883514b2782d0fd994f013125fa"
 
       def install
         bin.install "kwcli"
       end
     end
     on_arm do
-      url "https://github.com/clazic/kwcli/releases/download/v1.0.3/kwcli_Darwin_arm64.tar.gz"
-      sha256 "6e50e59c143e1deb4d2a50bd9e0ad821e6ce2d9982ba7a539b57c9e5627587af"
+      url "https://github.com/clazic/kwcli/releases/download/v0.1.0-test/kwcli_Darwin_arm64.tar.gz"
+      sha256 "7ed37f66b11b0f52c4228033ac097e85d4a5de6be9e54266efd17e7d2f6049d3"
 
       def install
         bin.install "kwcli"
@@ -29,8 +30,8 @@ class Kwcli < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/clazic/kwcli/releases/download/v1.0.3/kwcli_Linux_x86_64.tar.gz"
-        sha256 "41eb48702c6f858161a90b482a8281f4a37f9f2657185e2aef944e4e807f337d"
+        url "https://github.com/clazic/kwcli/releases/download/v0.1.0-test/kwcli_Linux_x86_64.tar.gz"
+        sha256 "d441a5c059d7ccbf58ffc130903a180ada70315902c25e687f15181c35c1987d"
 
         def install
           bin.install "kwcli"
@@ -39,13 +40,17 @@ class Kwcli < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/clazic/kwcli/releases/download/v1.0.3/kwcli_Linux_arm64.tar.gz"
-        sha256 "3d7b2a572ce8ceaa21188679b4bfdfaa7d65cbde7d1adb5c1a9db728eda85597"
+        url "https://github.com/clazic/kwcli/releases/download/v0.1.0-test/kwcli_Linux_arm64.tar.gz"
+        sha256 "2e7195cd84527985fe338ad8b5ea143a8b782377626105b44cfe844e105272d4"
 
         def install
           bin.install "kwcli"
         end
       end
     end
+  end
+
+  test do
+    system "#{bin}/kwcli --version"
   end
 end
