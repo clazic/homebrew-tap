@@ -9,43 +9,37 @@ class Kwcli < Formula
   license "MIT"
 
   on_macos do
-    on_intel do
+    if Hardware::CPU.intel?
       url "https://github.com/clazic/kwcli/releases/download/v0.1.0-test/kwcli_Darwin_x86_64.tar.gz"
-      sha256 "5fcc93057e814998c42235fc5e9a70f026f71883514b2782d0fd994f013125fa"
+      sha256 "dcd544816915d5346dd90113d18374d91ec49af6fd6df1a99d06ad430d2fa993"
 
-      def install
+      define_method(:install) do
         bin.install "kwcli"
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       url "https://github.com/clazic/kwcli/releases/download/v0.1.0-test/kwcli_Darwin_arm64.tar.gz"
-      sha256 "7ed37f66b11b0f52c4228033ac097e85d4a5de6be9e54266efd17e7d2f6049d3"
+      sha256 "b893a09181004640fc8c7b00d0f72da53edbc67d9567adcaadd9301b66ae076b"
 
-      def install
+      define_method(:install) do
         bin.install "kwcli"
       end
     end
   end
 
   on_linux do
-    on_intel do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/clazic/kwcli/releases/download/v0.1.0-test/kwcli_Linux_x86_64.tar.gz"
-        sha256 "d441a5c059d7ccbf58ffc130903a180ada70315902c25e687f15181c35c1987d"
-
-        def install
-          bin.install "kwcli"
-        end
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/clazic/kwcli/releases/download/v0.1.0-test/kwcli_Linux_x86_64.tar.gz"
+      sha256 "f877c789bd72b28ad498eb54b4fc8d9841dac63b687f26c0ed38e17315d2ce9b"
+      define_method(:install) do
+        bin.install "kwcli"
       end
     end
-    on_arm do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/clazic/kwcli/releases/download/v0.1.0-test/kwcli_Linux_arm64.tar.gz"
-        sha256 "2e7195cd84527985fe338ad8b5ea143a8b782377626105b44cfe844e105272d4"
-
-        def install
-          bin.install "kwcli"
-        end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/clazic/kwcli/releases/download/v0.1.0-test/kwcli_Linux_arm64.tar.gz"
+      sha256 "57a71fcaa76a4c199934e29636bd120e0d89e05ebfffa2d1ce7d7465128d5846"
+      define_method(:install) do
+        bin.install "kwcli"
       end
     end
   end
